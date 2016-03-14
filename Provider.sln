@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{DB948568-900B-4300-9C0C-4D50369F0C04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{BF05A527-4BDD-46F4-92B8-96DB6EECDDB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF05A527-4BDD-46F4-92B8-96DB6EECDDB9}.Debug|x86.ActiveCfg = Debug|x86
+		{BF05A527-4BDD-46F4-92B8-96DB6EECDDB9}.Debug|x86.Build.0 = Debug|x86
+		{BF05A527-4BDD-46F4-92B8-96DB6EECDDB9}.Release|x86.ActiveCfg = Release|x86
+		{BF05A527-4BDD-46F4-92B8-96DB6EECDDB9}.Release|x86.Build.0 = Release|x86
+		{DB948568-900B-4300-9C0C-4D50369F0C04}.Debug|x86.ActiveCfg = Debug|x86
+		{DB948568-900B-4300-9C0C-4D50369F0C04}.Debug|x86.Build.0 = Debug|x86
+		{DB948568-900B-4300-9C0C-4D50369F0C04}.Release|x86.ActiveCfg = Release|x86
+		{DB948568-900B-4300-9C0C-4D50369F0C04}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Server\Server.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = Hierarchical
+		$1.ResourceNamePolicy = FileFormatDefault
+	EndGlobalSection
+EndGlobal
