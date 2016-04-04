@@ -3,24 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{DB948568-900B-4300-9C0C-4D50369F0C04}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{BF05A527-4BDD-46F4-92B8-96DB6EECDDB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{F4193701-4BF7-4FA5-B488-2DF3AB47BE0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x86 = Debug|x86
-		Release|x86 = Release|x86
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DB948568-900B-4300-9C0C-4D50369F0C04}.Debug|x86.ActiveCfg = Debug|x86
-		{DB948568-900B-4300-9C0C-4D50369F0C04}.Debug|x86.Build.0 = Debug|x86
-		{DB948568-900B-4300-9C0C-4D50369F0C04}.Release|x86.ActiveCfg = Release|x86
-		{DB948568-900B-4300-9C0C-4D50369F0C04}.Release|x86.Build.0 = Release|x86
-		{BF05A527-4BDD-46F4-92B8-96DB6EECDDB9}.Debug|x86.ActiveCfg = Debug|x86
-		{BF05A527-4BDD-46F4-92B8-96DB6EECDDB9}.Debug|x86.Build.0 = Debug|x86
-		{BF05A527-4BDD-46F4-92B8-96DB6EECDDB9}.Release|x86.ActiveCfg = Release|x86
-		{BF05A527-4BDD-46F4-92B8-96DB6EECDDB9}.Release|x86.Build.0 = Release|x86
+		{F4193701-4BF7-4FA5-B488-2DF3AB47BE0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4193701-4BF7-4FA5-B488-2DF3AB47BE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4193701-4BF7-4FA5-B488-2DF3AB47BE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4193701-4BF7-4FA5-B488-2DF3AB47BE0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
