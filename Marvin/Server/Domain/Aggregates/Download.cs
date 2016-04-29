@@ -14,6 +14,5 @@ namespace Marvin.Domain.Aggregates
         protected Boolean Status;
         protected DateTime CreatedAt;
         protected Int32 ChunksSent; // Valor inicial: Nulo. Primeiro pedaço é zero
-        protected Chunk[] ChunkSent;
     }
 }

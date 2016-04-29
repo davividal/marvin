@@ -17,5 +17,12 @@ namespace Marvin.Domain.Entities
         protected Boolean Active;
 
         protected Boolean StandBy;
+
+        public Client(Socket Socket)
+        {
+            // IPAddress = Socket.GetIP();
+            Active = true;
+            StandBy = false;
+        }
     }
 }

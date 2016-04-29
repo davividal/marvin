@@ -9,6 +9,28 @@ namespace Marvin.Domain.Aggregates
 {
     class Connections
     {
-        protected Client[] Clients;
+        private static Connections instance;
+
+        protected List<Client> Clients;
+
+        private Connections()
+        {
+            Clients = new List<Client>();
+        }
+
+        public static Connections getInstance()
+        {
+            if (null == instance)
+            {
+                instance = new Connections();
+            }
+
+            return instance;
+        }
+
+        public void AddClient(Client Client)
+        {
+            Clients.Add(Client);
+        }
     }
 }
