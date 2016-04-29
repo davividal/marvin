@@ -63,6 +63,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Domain\Aggregates\Connections.cs" />
+    <Compile Include="Domain\Aggregates\Download.cs" />
+    <Compile Include="Domain\Aggregates\FileList.cs" />
+    <Compile Include="Domain\Entities\Chunk.cs" />
+    <Compile Include="Domain\Entities\Client.cs" />
+    <Compile Include="Domain\Entities\File.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -96,8 +102,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Domain\Aggregates\" />
-    <Folder Include="Domain\Entities\" />
     <Folder Include="Domain\Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
