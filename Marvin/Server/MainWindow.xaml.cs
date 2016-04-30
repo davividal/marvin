@@ -24,5 +24,28 @@ namespace Marvin
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+        private void ListView_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void bOpenFileDialog_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

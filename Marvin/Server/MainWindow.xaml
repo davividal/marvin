@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Marvin"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Server" Height="450" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="293*"/>
+            <RowDefinition Height="27*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Iniciar" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Parar" HorizontalAlignment="Left" Margin="108,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Reiniciar" HorizontalAlignment="Left" Margin="188,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <GroupBox Header="Arquivos" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Height="133" Width="497">
+            <Grid HorizontalAlignment="Left" Height="109" Margin="10,0,0,0" VerticalAlignment="Top" Width="460">
+                <Button Content="Adicionar" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="CamArquivo" VerticalAlignment="Top" Width="187"/>
+                <ListBox HorizontalAlignment="Left" Height="57" Margin="223,11,0,0" VerticalAlignment="Top" Width="209">
+                    <ListBoxItem Content="ListBoxItem"/>
+                    <ListBoxItem Content="ListBoxItem"/>
+                    <ListBoxItem Content="ListBoxItem"/>
+                </ListBox>
+                <Button Content="Remover" HorizontalAlignment="Left" Margin="223,79,0,0" VerticalAlignment="Top" Width="75"/>
+            </Grid>
+        </GroupBox>
+
+
+        <GroupBox Header="Clientes" HorizontalAlignment="Left" Margin="10,204,0,0" VerticalAlignment="Top" Height="180" Width="497">
+            <Grid HorizontalAlignment="Left" Height="148" Margin="0,10,-2,0" VerticalAlignment="Top" Width="487">
+                <Label Content="Cliente 1 (10.0.0.1)" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="115"/>
+                <ProgressBar HorizontalAlignment="Left" Height="13" Margin="156,16,0,0" VerticalAlignment="Top" Width="299"/>
+                <Label Content="Cliente 2 (10.0.0.1)" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="115"/>
+                <ProgressBar HorizontalAlignment="Left" Height="13" Margin="156,41,0,0" VerticalAlignment="Top" Width="299"/>
+            </Grid>
+        </GroupBox>
+
     </Grid>
 </Window>
