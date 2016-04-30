@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Client" Height="350" Width="525">
     <Grid>
-        
+        <Button Content="Conectar" HorizontalAlignment="Left" Margin="28,26,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Desconectar" HorizontalAlignment="Left" Margin="108,26,0,0" VerticalAlignment="Top" Width="75"/>
+        <ListBox HorizontalAlignment="Left" Height="100" Margin="28,65,0,0" VerticalAlignment="Top" Width="467">
+            <ListBoxItem Content="ListBoxItem"/>
+            <ListBoxItem Content="ListBoxItem"/>
+            <ListBoxItem Content="ListBoxItem"/>
+            <ListBoxItem Content="ListBoxItem"/>
+            <ListBoxItem Content="ListBoxItem"/>
+        </ListBox>
+        <Button Content="Download" HorizontalAlignment="Left" Margin="28,187,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Item 2" HorizontalAlignment="Left" Margin="65,229,0,0" VerticalAlignment="Top"/>
+        <ProgressBar HorizontalAlignment="Left" Height="13" Margin="137,236,0,0" VerticalAlignment="Top" Width="327"/>
+
     </Grid>
 </Window>
