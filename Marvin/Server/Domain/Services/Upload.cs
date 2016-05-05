@@ -22,12 +22,12 @@ namespace Marvin.Domain.Services
 
         private void GetChunks()
         {
-            return File.GetChunks();
+            //return File.GetChunks();
         }
 
-        public SendFile()
+        /*public SendFile()
         {
             Client.getSocket().Send();
-        }
+        }*/
     }
 }

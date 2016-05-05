@@ -14,13 +14,14 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content="Iniciar" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Iniciar" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Parar" HorizontalAlignment="Left" Margin="108,10,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Reiniciar" HorizontalAlignment="Left" Margin="188,10,0,0" VerticalAlignment="Top" Width="75"/>
         <GroupBox Header="Arquivos" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Height="133" Width="497">
             <Grid HorizontalAlignment="Left" Height="109" Margin="10,0,0,0" VerticalAlignment="Top" Width="460">
-                <Button Content="Adicionar" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="75"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="CamArquivo" VerticalAlignment="Top" Width="187"/>
+                <Button Content="Adicionar" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"
+                        />
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="CamArquivo" VerticalAlignment="Top" Width="187" Name="txtEditor"/>
                 <ListBox HorizontalAlignment="Left" Height="57" Margin="223,11,0,0" VerticalAlignment="Top" Width="209">
                     <ListBoxItem Content="ListBoxItem"/>
                     <ListBoxItem Content="ListBoxItem"/>

@@ -8,6 +8,7 @@ namespace Marvin.Domain.Entities
 {
     class Chunk
     {
+
         protected File File;
 
         protected Byte[] Content;
