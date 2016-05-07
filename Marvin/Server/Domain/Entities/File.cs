@@ -45,7 +45,7 @@ namespace Marvin.Domain.Entities
             Size = (new System.IO.FileInfo(Path)).Length;
         }
 
-        public String ToString()
+        override public String ToString()
         {
             return String.Format("{0} ({1})", Name, new FileSize(Size, FileSize.Unit.MB).ToString());
         }

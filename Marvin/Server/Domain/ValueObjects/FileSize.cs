@@ -39,7 +39,7 @@ namespace Marvin.Domain.ValueObjects
             return Math.Pow(1024, Convert.ToInt32(DisplayUnit));
         }
 
-        public String ToString()
+        override public String ToString()
         {
             return String.Format("{0} {1}", Size, GetUnit());
         }
