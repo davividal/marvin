@@ -19,15 +19,11 @@
         <Button Content="Reiniciar" HorizontalAlignment="Left" Margin="188,10,0,0" VerticalAlignment="Top" Width="75"/>
         <GroupBox Header="Arquivos" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Height="133" Width="497">
             <Grid HorizontalAlignment="Left" Height="109" Margin="10,0,0,0" VerticalAlignment="Top" Width="460">
-                <Button Content="Adicionar" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"
-                        />
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="CamArquivo" VerticalAlignment="Top" Width="187" Name="txtEditor"/>
-                <ListBox HorizontalAlignment="Left" Height="57" Margin="223,11,0,0" VerticalAlignment="Top" Width="209">
-                    <ListBoxItem Content="ListBoxItem"/>
-                    <ListBoxItem Content="ListBoxItem"/>
-                    <ListBoxItem Content="ListBoxItem"/>
+                <Button x:Name="AddFile" Content="Adicionar" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="75" Click="AddFile_Click" />
+                <TextBox x:Name="FilePath" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" GotFocus="SearchFile"/>
+                <ListBox x:Name="FileList" HorizontalAlignment="Left" Height="57" Margin="223,11,0,0" VerticalAlignment="Top" Width="209">
                 </ListBox>
-                <Button Content="Remover" HorizontalAlignment="Left" Margin="223,79,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="Remove" Content="Remover" HorizontalAlignment="Left" Margin="223,79,0,0" VerticalAlignment="Top" Width="75" Click="Remove_Click"/>
             </Grid>
         </GroupBox>
 

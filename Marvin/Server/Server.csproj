@@ -70,6 +70,7 @@
     <Compile Include="Domain\Entities\Client.cs" />
     <Compile Include="Domain\Entities\File.cs" />
     <Compile Include="Domain\Services\Upload.cs" />
+    <Compile Include="Domain\ValueObjects\FileSize.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -1,5 +1,4 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,17 +21,56 @@ namespace Marvin
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Domain.Aggregates.FileList Files;
+        private OpenFileDialog SelectedFiles;
         
         public MainWindow()
         {
+            Files = Domain.Aggregates.FileList.getInstance();
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SearchFile(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = true;
+
             if (openFileDialog.ShowDialog() == true)
-            txtEditor.Text = File.ReadAllText(openFileDialog.FileName);
+            {
+                FilePath.Text = String.Join("; ", openFileDialog.FileNames);
+                SelectedFiles = openFileDialog;
+            }
+            AddFile.Focus();
+        }
+
+        private void AddFile_Click(object sender, RoutedEventArgs e)
+        {
+            if (null == SelectedFiles)
+            {
+                SearchFile(sender, e);
+
+                if (null == SelectedFiles) return;
+            }
+
+            foreach (String FileName in SelectedFiles.FileNames)
+            {
+                File NewFile = new File(
+                    FileName,
+                    (new System.IO.FileInfo(FileName)).Name
+                );
+                Files.AddFile(NewFile);
+                FileList.Items.Add(NewFile.ToString());
+                SelectedFiles = null;
+                FilePath.Text = "";
+            }
+        }
+
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+            if (-1 != FileList.SelectedIndex)
+            {
+                FileList.Items.RemoveAt(FileList.SelectedIndex);
+            }
         }
     }
 }
