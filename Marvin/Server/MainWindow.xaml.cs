@@ -68,10 +68,28 @@ namespace Marvin
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
-            if (-1 != FileList.SelectedIndex)
-            {
-                FileList.Items.RemoveAt(FileList.SelectedIndex);
-            }
+                FileList.Items.Remove(FileList.SelectedItem);
+            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //Server.start();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            //Server.stop();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            //Server.restart();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            //Remover item
         }
     }
 }

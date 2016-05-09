@@ -14,9 +14,9 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content="Iniciar" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Parar" HorizontalAlignment="Left" Margin="108,10,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Reiniciar" HorizontalAlignment="Left" Margin="188,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Iniciar" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Parar" HorizontalAlignment="Left" Margin="108,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Button Content="Reiniciar" HorizontalAlignment="Left" Margin="188,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
         <GroupBox Header="Arquivos" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Height="133" Width="497">
             <Grid HorizontalAlignment="Left" Height="109" Margin="10,0,0,0" VerticalAlignment="Top" Width="460">
                 <Button x:Name="AddFile" Content="Adicionar" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="75" Click="AddFile_Click" />
