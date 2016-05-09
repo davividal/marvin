@@ -30,7 +30,14 @@ namespace Marvin.Domain.Aggregates
 
         public void AddFile(File File)
         {
+            //verificar se o arquivo já existe
             Files.Add(File);
+        }
+
+        public void RemoveFile(File File)
+        {
+
+            Files.Remove(File);
         }
     }
 }
