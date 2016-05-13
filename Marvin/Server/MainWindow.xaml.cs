@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using Marvin.Domain.Entities;
+using System.Net.Sockets;
+using System.Net;
 
 namespace Marvin
 {
@@ -60,6 +62,7 @@ namespace Marvin
                     (new System.IO.FileInfo(FileName)).Name
                 );
                 Files.AddFile(NewFile);
+                if(!FileList.Items.Contains(NewFile.ToString()))
                 FileList.Items.Add(NewFile.ToString());
                 SelectedFiles = null;
                 FilePath.Text = "";
@@ -74,7 +77,7 @@ namespace Marvin
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //Server.start();
+            
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
