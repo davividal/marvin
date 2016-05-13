@@ -26,6 +26,11 @@ namespace Client
         public MainWindow()
         {
             InitializeComponent();
+            /*System.Net.Sockets.UdpClient udpclient = new System.Net.Sockets.UdpClient();
+            System.Net.IPEndPoint localEp = new System.Net.IPEndPoint(System.Net.IPAddress.Parse("127.0.0.1"), 24000);
+            udpclient.Client.Bind(localEp);
+            udpclient.Client.ReceiveTimeout = 10000;
+            udpclient.Receive();*/
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

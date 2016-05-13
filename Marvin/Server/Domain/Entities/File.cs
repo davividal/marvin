@@ -1,10 +1,7 @@
 ﻿using Marvin.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Marvin.Domain.Entities
 {
@@ -14,11 +11,13 @@ namespace Marvin.Domain.Entities
 
         protected String Name;
 
-        protected long Size;
+        protected Double Size;
 
         protected String Checksum;
 
-        protected Chunk[] Chunks;
+        protected List<Chunk> Chunks;
+
+        protected const Int32 ChunkSize = 1024;
 
         public File(String Filepath, String Basename)
         {
@@ -27,6 +26,19 @@ namespace Marvin.Domain.Entities
 
             this.DetermineFileSize();
             this.DetermineFileChecksum();
+            this.DetermineChunks();
+        }
+
+        private void DetermineChunks()
+        {
+            Int32 chunks = Convert.ToInt32(Math.Round(Size / ChunkSize));
+
+            Byte[] file = System.IO.File.ReadAllBytes(Path);
+
+            for (Int32 chunk = 0, offset = 0; chunk <= chunks; chunk++, offset += ChunkSize)
+            {
+                Chunks.Add(new Chunk(new ArraySegment<Byte>(file, offset, ChunkSize)));
+            }
         }
 
         private void DetermineFileChecksum()
@@ -42,7 +54,7 @@ namespace Marvin.Domain.Entities
 
         private void DetermineFileSize()
         {
-            Size = (new System.IO.FileInfo(Path)).Length;
+            Size = Convert.ToDouble((new System.IO.FileInfo(Path)).Length);
         }
 
         override public String ToString()

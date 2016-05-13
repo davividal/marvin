@@ -26,5 +26,15 @@ namespace Marvin.Domain.Entities
             Connect = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 
         }
+
+        public void Disconnect()
+        {
+            Socket.Close();
+        }
+
+        public void SendMessage(Byte[] message)
+        {
+            Socket.Send(message);
+        }
     }
 }

@@ -69,6 +69,7 @@
     <Compile Include="Domain\Entities\Chunk.cs" />
     <Compile Include="Domain\Entities\Client.cs" />
     <Compile Include="Domain\Entities\File.cs" />
+    <Compile Include="Domain\Services\ServerService.cs" />
     <Compile Include="Domain\Services\Upload.cs" />
     <Compile Include="Domain\ValueObjects\FileSize.cs" />
     <Compile Include="MainWindow.xaml.cs">

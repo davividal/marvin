@@ -30,9 +30,26 @@ namespace Marvin.Domain.Aggregates
             return instance;
         }
 
-        public void AddClient(Client Client)
+        public void Accept(Client Client)
         {
             Clients.Add(Client);
+        }
+
+        public void Disconnect(Client Client)
+        {
+            Client.Disconnect();
+            Clients.Remove(Client);
+        }
+
+        internal void SendMessage(Client client, Byte[] message)
+        {
+            Client.SendMessage(message);
+        }
+
+        internal void SendMessage(Client client, String messageStr)
+        {
+            Byte[] message = System.Text.Encoding.UTF8.GetBytes(messageStr);
+            SendMessage(client, message);
         }
     }
 }
