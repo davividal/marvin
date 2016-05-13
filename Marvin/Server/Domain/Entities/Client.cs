@@ -24,5 +24,15 @@ namespace Marvin.Domain.Entities
             Active = true;
             StandBy = false;
         }
+
+        public void Disconnect()
+        {
+            Socket.Close();
+        }
+
+        public void SendMessage(Byte[] message)
+        {
+            Socket.Send(message);
+        }
     }
 }

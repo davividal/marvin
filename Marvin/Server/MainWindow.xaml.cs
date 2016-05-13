@@ -1,21 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Microsoft.Win32;
 using Marvin.Domain.Entities;
-using System.Net.Sockets;
-using System.Net;
+using Marvin.Domain.Services;
+using System.Threading;
 
 namespace Marvin
 {
@@ -38,7 +26,7 @@ namespace Marvin
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = true;
 
-            if (openFileDialog.ShowDialog() == true)
+            if (true == openFileDialog.ShowDialog())
             {
                 FilePath.Text = String.Join("; ", openFileDialog.FileNames);
                 SelectedFiles = openFileDialog;
@@ -63,7 +51,9 @@ namespace Marvin
                 );
                 Files.AddFile(NewFile);
                 if(!FileList.Items.Contains(NewFile.ToString()))
-                FileList.Items.Add(NewFile.ToString());
+                {
+                    FileList.Items.Add(NewFile.ToString());
+                }
                 SelectedFiles = null;
                 FilePath.Text = "";
             }
@@ -72,12 +62,13 @@ namespace Marvin
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
                 FileList.Items.Remove(FileList.SelectedItem);
-            
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Start_Click(object sender, RoutedEventArgs e)
         {
-            
+            ServerService server = new ServerService("127.0.0.1", "12400"); // Isto deve ser feito numa thread
+            Thread oThread = new Thread(new ThreadStart(ServerService.ListenConnection));
+            //Server.start();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

@@ -12,7 +12,7 @@ namespace Marvin.Domain.ValueObjects
         private Double Size;
         private Unit DisplayUnit;
 
-        public FileSize(long size, Unit unit)
+        public FileSize(Double size, Unit unit)
         {
             DisplayUnit = unit;
             Size = Math.Round(size / GetDivisor(), 2);
