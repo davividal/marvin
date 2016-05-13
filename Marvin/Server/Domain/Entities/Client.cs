@@ -4,13 +4,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Marvin.Domain.Entities
 {
-    class Client
+    class Client : ThreadStaticAttribute
     {
-        protected Socket Socket;
+        protected Socket Connect;
 
         protected IPAddress IPAddress;
 
@@ -23,6 +22,9 @@ namespace Marvin.Domain.Entities
             // IPAddress = Socket.GetIP();
             Active = true;
             StandBy = false;
+
+            Connect = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+
         }
     }
 }
